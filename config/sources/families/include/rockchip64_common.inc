@@ -36,8 +36,7 @@ if [[ $BOARD == nanopi-r2s || $BOARD == rockpi-e || $BOARD == nanopineo3 || $BOA
 elif [[ $BOARD == rock64 ]]; then
 
 	BOOT_RK3328_USE_AYUFAN_ATF=yes
-	ATFPATCHDIR='atf-rk3399'
-	BOOT_SOC=rk3399
+	ATF_TARGET_MAP='PLAT=rk322xh DEBUG=1 bl31;;trust.bin'
 
 elif [[ $BOOTCONFIG == *3328* ]]; then
 
@@ -124,7 +123,6 @@ prepare_boot_configuration()
 		ATF_COMPILE='no'
 
 		legacy_uboot_locations
-		uboot_custom_postprocess
 
 	elif [[ $BOOT_RK3328_USE_AYUFAN_ATF == yes ]]; then # to be removed
 
@@ -138,7 +136,6 @@ prepare_boot_configuration()
 		ATF_TOOLCHAIN2="arm-linux-gnueabi-:> 5.0"
 
 		legacy_uboot_locations
-		uboot_custom_postprocess
 
 	fi
 
