@@ -124,6 +124,7 @@ prepare_boot_configuration()
 		ATF_COMPILE='no'
 
 		legacy_uboot_locations
+		uboot_custom_postprocess
 
 	elif [[ $BOOT_RK3328_USE_AYUFAN_ATF == yes ]]; then # to be removed
 
@@ -137,6 +138,7 @@ prepare_boot_configuration()
 		ATF_TOOLCHAIN2="arm-linux-gnueabi-:> 5.0"
 
 		legacy_uboot_locations
+		uboot_custom_postprocess
 
 	fi
 
