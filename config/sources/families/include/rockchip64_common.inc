@@ -36,7 +36,7 @@ if [[ $BOARD == nanopi-r2s || $BOARD == rockpi-e || $BOARD == nanopineo3 || $BOA
 elif [[ $BOARD == rock64 ]]; then
 
 	BOOT_USE_MAINLINE_ATF=yes
-	BOOT_SOC=rk3328
+	BOOT_SOC=rk3399
 
 elif [[ $BOOTCONFIG == *3328* ]]; then
 
