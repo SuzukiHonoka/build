@@ -35,6 +35,7 @@ if [[ $BOARD == nanopi-r2s || $BOARD == rockpi-e || $BOARD == nanopineo3 || $BOA
 
 elif [[ $BOARD == rock64 ]]; then
 
+	BOOT_SOC=rk3328
 	BOOT_RK3328_USE_AYUFAN_ATF=yes
 	ATF_TARGET_MAP='PLAT=rk322xh DEBUG=1 bl31;;trust.bin'
 
